@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>loginServlet</servlet-name>
+  <servlet-class>com.lntu.servlet.loginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>exitServlet</servlet-name>
+    <servlet-class>com.lntu.servlet.exitServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>inputStuInfoServlet</servlet-name>
+    <servlet-class>com.lntu.servlet.inputStuInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>queryAllStuServlet</servlet-name>
+    <servlet-class>com.lntu.servlet.queryAllStuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>modifyOneStuServlet</servlet-name>
+    <servlet-class>com.lntu.servlet.modifyOneStuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>modifyOneStuInfoServlet</servlet-name>
+    <servlet-class>com.lntu.servlet.modifyOneStuInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>deleteStuServlet</servlet-name>
+    <servlet-class>com.lntu.servlet.deleteStuServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+  <servlet-name>loginServlet</servlet-name>
+  <url-pattern>/user/loginServlet.servlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  <servlet-name>exitServlet</servlet-name>
+  <url-pattern>/user/exitServlet.servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>inputStuInfoServlet</servlet-name>
+    <url-pattern>/student/inputStuInfoServlet.servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>queryAllStuServlet</servlet-name>
+    <url-pattern>/student/queryAllStuServlet.servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>modifyOneStuServlet</servlet-name>
+    <url-pattern>/student/modifyOneStuServlet.servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>modifyOneStuInfoServlet</servlet-name>
+    <url-pattern>/student/modifyOneStuInfoServlet.servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deleteStuServlet</servlet-name>
+    <url-pattern>/student/deleteStuServlet.servlet</url-pattern>
+  </servlet-mapping>
+  
+<filter>
+	<filter-name>struts2</filter-name>
+	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	<filter-name>struts2</filter-name>
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+</web-app>
